@@ -300,17 +300,90 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  @media (max-width: 640px) {
-    .header { padding: 28px 20px 24px; }
-    .banner { padding: 12px 20px; }
-    .timeline { padding: 0 16px; }
-    .summary-wrap { padding: 0 16px; }
-    .footer { padding: 0 16px; }
-    h1 { font-size: 22px; }
-    .columns { grid-template-columns: 1fr; gap: 20px; }
-    .header-meta { flex-direction: column; align-items: flex-start; }
-    .status-badge { text-align: left; }
+  @media (max-width: 700px) {
+    /* Header */
+    .header { padding: 24px 16px 22px; }
+    .logo { height: 40px; margin-bottom: 18px; }
+    h1 { font-size: 21px; }
+    .header-sub { font-size: 12px; }
+    .header-meta { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .status-badge { text-align: left; width: 100%; padding: 10px 14px; }
     .status-dot-row { justify-content: flex-start; }
+
+    /* Progress bar — larger tap targets */
+    .progress-wrap { margin-top: 20px; }
+    .bar { height: 8px; border-radius: 4px; }
+
+    /* Banner */
+    .banner { padding: 12px 16px; }
+    .banner-text { font-size: 12px; }
+
+    /* Timeline */
+    .timeline { padding: 0 12px; margin-top: 24px; }
+    .rail { width: 28px; }
+    .rail-dot { width: 10px; height: 10px; margin-top: 18px; }
+    .card-wrap { padding-left: 10px; padding-bottom: 10px; }
+
+    /* Card header — bigger tap target */
+    .card-header { padding: 14px 14px; }
+    .phase-name { font-size: 14px; }
+    .week-label { font-size: 9px; }
+    .badge-inprogress, .badge-gate { font-size: 8.5px; padding: 2px 6px; }
+    .chevron { font-size: 20px; min-width: 24px; text-align: center; }
+
+    /* Card body */
+    .card-body { padding: 0 14px 18px; }
+
+    /* Stack columns vertically on mobile */
+    .columns {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding-top: 16px;
+    }
+
+    /* Divider between agency and client sections */
+    .columns > div:last-child {
+      padding-top: 16px;
+      border-top: 1px solid #EBEBEB;
+    }
+
+    /* Larger touch targets for checkboxes */
+    .check-item {
+      padding: 4px 0;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+    .check-box {
+      width: 20px; height: 20px;
+      border-radius: 4px; margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .check-tick { width: 11px; height: 11px; }
+    .item-text { font-size: 13.5px; line-height: 1.6; }
+
+    /* Agency items */
+    .agency-item { gap: 10px; padding: 2px 0; margin-bottom: 7px; }
+    .agency-dot { margin-top: 9px; }
+
+    /* Gate callout */
+    .gate-callout { padding: 12px 13px; gap: 10px; margin-top: 16px; }
+    .gate-title { font-size: 10.5px; }
+    .gate-desc { font-size: 12px; }
+
+    /* Mini progress */
+    .mini-progress { margin-top: 6px; }
+
+    /* Summary */
+    .summary-wrap { padding: 0 12px; margin-top: 32px; }
+    .summary-box { padding: 22px 18px; border-radius: 10px; }
+    .summary-title { font-size: 16px; margin-bottom: 16px; }
+    .gate-row { padding: 10px 10px; gap: 10px; flex-wrap: wrap; }
+    .gate-num { width: 40px; font-size: 9.5px; }
+    .gate-name { font-size: 12.5px; flex-basis: 100%; order: 3; color: #AAA; padding-top: 2px; }
+    .gate-date { font-size: 11.5px; margin-left: auto; }
+
+    /* Footer */
+    .footer { padding: 0 12px; font-size: 10.5px; line-height: 1.7; }
   }
 </style>
 </head>
